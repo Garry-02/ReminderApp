@@ -42,7 +42,20 @@ let remindersController = {
 
   update: (req, res) => {
     // implement this code
+    //if(!(req.params.id instanceof database))
+    let updates = database.cindy.reminders.find(function (reminder) {
+      return reminder.id == reminderToFind},
+    let reminderUpdate = {
+      id: database.cindy.reminders.length + 1,
+      title: req.body.title,
+      description: req.body.description,
+      completed: false,
+    };
+    database.cindy.reminders.push(reminderUpdate);
+    res.redirect("/reminders", {reminderItem: });
   },
+
+  
 
   delete: (req, res) => {
     // Implement this code
