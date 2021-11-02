@@ -48,7 +48,7 @@ let remindersController = {
     // updates the data of the reminder 
      reminderToUpdate.title =  req.body.title;
      reminderToUpdate.description = req.body.description;
-     reminderToUpdate.completed = Boolean(req.body.completed);    
+     reminderToUpdate.completed = req.body.completed === "true";    
     
     res.redirect("/reminders");   // redirect to "/reminders"
 },
