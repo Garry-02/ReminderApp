@@ -40,28 +40,28 @@ let remindersController = {
     res.render("reminder/edit", { reminderItem: searchResult });
   },
 
-  update: (req, res) => {
+  update: (req, res) => {     // feature to update the reminder 
     // implement this code
-   let reminderToUpdate = database.cindy.reminders.find(function (reminder) {
-     return reminder.id == req.params.id;
+   let reminderToUpdate = database.cindy.reminders.find(function (reminder) {   // finds the reminder to be updated
+     return reminder.id == req.params.id;   
    });
-   
+    // updates the data of the reminder 
      reminderToUpdate.title =  req.body.title;
      reminderToUpdate.description = req.body.description;
-     reminderToUpdate.completed = Boolean(req.body.completed);
+     reminderToUpdate.completed = Boolean(req.body.completed);    
     
-    res.redirect("/reminders");
+    res.redirect("/reminders");   // redirect to "/reminders"
 },
 
-  delete: (req, res) => {
+  delete: (req, res) => {   // feature to delete the reminder 
     // Implement this code
-    reminderToDelete = database.cindy.reminders.find(function (reminder) {
+    reminderToDelete = database.cindy.reminders.find(function (reminder) {    // finds the reminder to be deleted
       return reminder.id == req.params.id;
     });
 
-    database.cindy.reminders.splice(reminderToDelete, 1);
+    database.cindy.reminders.splice(reminderToDelete, 1);   // deletes the reminder 
 
-    res.redirect("/reminders");
+    res.redirect("/reminders");   // redirect to "/reminders"
   },
 };
 
