@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const database = [
     {
       id: 1,
@@ -38,7 +38,7 @@ const database = [
   };
   
   module.exports = { database, userModel };
-=======
+
 const database = [
     {
       id: 1,
@@ -78,5 +78,5 @@ const database = [
   };
   
   module.exports = { database, userModel };
->>>>>>> 847570d87c2be356c35a785e2d80bd80d472c465
+
   
