@@ -1,12 +1,12 @@
 const express = require("express");
-const passport = require("../middleware/passport");
-const { forwardAuthenticated } = require("../middleware/checkAuth");
+const passport = require("../controller/middleware/passport");
+const { forwardAuthenticated } = require("../controller/middleware/checkAuth");
 const { route } = require("./indexRoute");
 const router = express.Router();
 //shows login page/register page
 //localhost:3002/auth/login
-router.get("/login", forwardAuthenticated, (req, res) => res.render("login"));
-router.get("/register", forwardAuthenticated, (req, res) => res.render("register"));
+router.get("/login", (req, res) => res.render("auth/login"));
+router.get("/register", forwardAuthenticated, (req, res) => res.render("auth/register"));
 
 //code used when login button clicked
 //localhost:3002/auth/login

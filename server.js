@@ -22,10 +22,10 @@ app.use(
   })
 );
 //all congif for passport
-const passport = require("./middleware/passport");
+const passport = require("./controller/middleware/passport");
 const authRoute = require("./routes/authRoute");
 const indexRoute = require("./routes/indexRoute");
-const helpRoute = require("./routes/helpRoute");
+// const helpRoute = require("./routes/helpRoute");
 
 // Middleware for express
 //app.use(express.json());
