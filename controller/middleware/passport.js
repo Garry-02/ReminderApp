@@ -20,6 +20,17 @@ const localLogin = new LocalStrategy(
         });
   }
 );
+let githubLogin = new GitHubStrategy(
+  {
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL: "http://localhost:3002/auth/github/callback",
+  },
+  function (accessToken, refreshToken, profile, done){
+    let user = userController.getUserByGitHubIdOrCreate(profile);
+    return done(null, user);
+  }
+)
 //This is where the session is created
 //when the seesion is created what does it look like? stores some type of infop that will allow us to identify them that we store for the session 
 //creates a special variable req.user = user; gives all the information about the currently logged in user
@@ -37,4 +48,5 @@ passport.deserializeUser(function (id, done) {
   }
 });
 
-module.exports = passport.use(localLogin);
+
+module.exports = passport.use(localLogin, githubLogin);
