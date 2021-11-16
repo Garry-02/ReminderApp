@@ -5,6 +5,7 @@ const path = require("path");
 const port = process.env.port || 3002;
 //app refers to our Server   
 const app = express();
+require("dotenv").config()
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));//pictures
