@@ -36,9 +36,9 @@ Jennifer :
   November 9 (Third Sprint Start)
 
 Garry :
-  I worked on the following tasks : Admin/user capabilities(not complete yet)
+  I worked on the following tasks : 
 
-  I watched the following videos : Github auth, upload images
+  I watched the following videos :
   
 James :
   I worked on the following tasks : upload profile pics(not working yet)
