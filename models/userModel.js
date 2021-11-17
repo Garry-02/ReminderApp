@@ -26,7 +26,7 @@ const database = [
   
   const userModel = {
     findOne: (email) => {
-      const user = database.find((user) => user.email === email);
+      const user = database.find((user) => user.email === email); 
       if (user) {
         return user;
       }
