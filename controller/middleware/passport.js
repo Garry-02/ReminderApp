@@ -1,5 +1,6 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const githubLogin = require("passport-github2").Strategy;
 const userController = require("../userController");
 const localLogin = new LocalStrategy(
   {
