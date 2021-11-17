@@ -25,6 +25,8 @@ app.use(
 const passport = require("./controller/middleware/passport");
 const authRoute = require("./routes/authRoute");
 const indexRoute = require("./routes/indexRoute");
+const adminRoute = require("./routes/adminRoute");
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(expressLayouts);
@@ -71,6 +73,15 @@ app.post("/register", authController.registerSubmit);
 app.post("/login", authController.loginSubmit);
 // app.use("/", indexRoute);
 app.use("/auth", authRoute);
+
+app.get("/admin", (req, res) => {
+  req.sessionStore.all((err, sess) => {
+    console.log(sess)
+    console.log(Object.keys(sess)[0])
+  })
+  
+  res.render("admin/admin", {user: req.user})
+}); // The admin route 
 
 app.listen(3002, function () {
   console.log(
