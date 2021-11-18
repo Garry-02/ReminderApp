@@ -12,6 +12,9 @@ const imgur = require("imgur");
 const cors = require("cors");
 const fs = require("fs");
 
+const passport = require("./controller/middleware/passport");
+const authRoute = require("./routes/authRoute");
+const indexRoute = require("./routes/indexRoute");
 
 //start of the Profile Pic section
 const storage = multer.diskStorage({
@@ -45,9 +48,7 @@ app.use(
 
 
 
-const passport = require("./controller/middleware/passport");
-const authRoute = require("./routes/authRoute");
-const indexRoute = require("./routes/indexRoute");
+
 
 app.use(upload.any());
 app.post("/uploads/", async (req, res) => {
