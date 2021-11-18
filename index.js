@@ -12,6 +12,8 @@ const imgur = require("imgur");
 const cors = require("cors");
 const fs = require("fs");
 
+
+//start of the Profile Pic section
 const storage = multer.diskStorage({
   destination: "./uploads",
   filename: (req, file, callback) => {
