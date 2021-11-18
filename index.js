@@ -73,15 +73,9 @@ app.post("/register", authController.registerSubmit);
 app.post("/login", authController.loginSubmit);
 // app.use("/", indexRoute);c
 app.use("/auth", authRoute);
+app.use("/admin", adminRoute);
 
-app.get("/admin", (req, res) => {
-  req.sessionStore.all((err, sess) => {
-    //console.log(sess)
-    //console.log(Object.keys(sess))
-    let keys = Object.keys(sess)
-    res.render("admin/admin", {req, keys});
-  });
-}); // The admin route 
+
 
 app.listen(3002, function () {
   console.log(
