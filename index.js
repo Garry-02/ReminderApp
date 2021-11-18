@@ -51,7 +51,7 @@ app.use(
 
 app.use(upload.any());
 // removes the image stored in "/uploads/" file
-// after uploading the profile pic to imgur
+// after uploading the profile pic to imgur.
 app.post("/uploads/", async (req, res) => {
   const file = req.files[0];
   try {
@@ -62,8 +62,7 @@ app.post("/uploads/", async (req, res) => {
     console.log("error", error);
   }
 });
-
-
+// End of ProfilePic section.
 
 app.use(express.urlencoded({ extended: true }));
 app.use(expressLayouts);
@@ -116,4 +115,3 @@ app.listen(3002, function () {
     "Server running. Visit: localhost:3002/reminders in your browser 🚀"
   );
 });
-
