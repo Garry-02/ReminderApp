@@ -2,7 +2,7 @@ document.getElementById("file").addEventListener("change", (ev) => {
     ev.preventDefault();
     const formdata = new FormData();
     formdata.append("image", ev.target.files[0]);
-    fetch("http://localhost:3000/uploads", {
+    fetch("http://localhost:3002/uploads", {
       method: "POST",
       body: formdata,
     })
