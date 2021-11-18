@@ -75,14 +75,12 @@ app.post("/login", authController.loginSubmit);
 app.use("/auth", authRoute);
 
 app.get("/admin", (req, res) => {
-  let sessioninfo = []
   req.sessionStore.all((err, sess) => {
-    console.log(sess)
-    sessioninfo.push(Object.keys(sess))
-    console.log(sessioninfo)
-  })
-  
-  res.render("admin/admin", {user: req.user, sess: sessioninfo })
+    //console.log(sess)
+    //console.log(Object.keys(sess))
+    let keys = Object.keys(sess)
+    res.render("admin/admin", {req, keys});
+  });
 }); // The admin route 
 
 app.listen(3002, function () {
