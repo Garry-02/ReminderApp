@@ -32,6 +32,8 @@ const upload = multer({
 
 
 app.use(cors());
+
+//inserted into ProfilePic section
 app.use(express.static(path.join(__dirname, "public")));
 app.use(
   session({
@@ -47,10 +49,9 @@ app.use(
 );
 
 
-
-
-
 app.use(upload.any());
+// removes the image stored in "/uploads/" file
+// after uploading the profile pic to imgur
 app.post("/uploads/", async (req, res) => {
   const file = req.files[0];
   try {
@@ -61,6 +62,8 @@ app.post("/uploads/", async (req, res) => {
     console.log("error", error);
   }
 });
+
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(expressLayouts);
@@ -113,3 +116,4 @@ app.listen(3002, function () {
     "Server running. Visit: localhost:3002/reminders in your browser 🚀"
   );
 });
+
