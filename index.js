@@ -48,6 +48,8 @@ app.use(
 const passport = require("./controller/middleware/passport");
 const authRoute = require("./routes/authRoute");
 const indexRoute = require("./routes/indexRoute");
+const adminRoute = require("./routes/adminRoute");
+
 
 app.use(upload.any());
 app.post("/uploads/", async (req, res) => {
@@ -105,6 +107,9 @@ app.get("/login", authController.login);
 app.post("/register", authController.registerSubmit);
 app.post("/login", authController.loginSubmit);
 
+app.use("/", indexRoute);
+
+
 app.get("/dashboard", ensureAuthenticated, (req, res) => {
   console.log(req.sessionID);
   res.render("dashboard", {
@@ -113,7 +118,11 @@ app.get("/dashboard", ensureAuthenticated, (req, res) => {
 });
 
 // app.use("/", indexRoute);
+
 app.use("/auth", authRoute);
+app.use("/admin", adminRoute);
+
+
 
 app.listen(3002, function () {
   console.log(
