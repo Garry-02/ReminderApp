@@ -30,22 +30,5 @@ James :
 Jennifer : 
   I worked on the following tasks : Register into local database, Log-in with credentials, ensure authentication 
 
-  I watched the following videos : Authentication  
-  
-November 9 (Second Sprint Start)
 
-Garry :
-  I worked on the following tasks :
-
-  I watched the following videos :
-
-James :
-  I worked on the following tasks : 
-
-  I watched the following videos : 
-  
-Jennifer : 
-  I worked on the following tasks :  
-
-  I watched the following videos : 
   
