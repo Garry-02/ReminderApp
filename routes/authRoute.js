@@ -6,8 +6,16 @@ const router = express.Router();
 //shows login page/register page
 //localhost:3002/auth/login
 router.get("/login", (req, res) => res.render("auth/login"));
+router.get("/github", passport.authenticate("github"));
 router.get("/register", forwardAuthenticated, (req, res) => res.render("auth/register"));
 
+router.get(
+  "/github/callback",
+  passport.authenticate("github"),
+  function (req, res) {
+    res.redirect("/dashboard");
+  }
+);
 //code used when login button clicked
 //localhost:3002/auth/login
 router.post(
@@ -15,7 +23,7 @@ router.post(
   //core of passport will handle authentication via middleware
   //local can be changed to say twitter or whatever you want to use to login
   passport.authenticate("local", {
-    successRedirect: "/reminders",
+    successRedirect: "/dashboard",
     failureRedirect: "/auth/login",
   })
 );

@@ -30,22 +30,5 @@ James :
 Jennifer : 
   I worked on the following tasks : Register into local database, Log-in with credentials, ensure authentication 
 
-  I watched the following videos : Authentication  
-  
-November 9 (Third Sprint Start)
 
-Garry :
-  I worked on the following tasks : Admin capabilities
-
-  I watched the following videos : Both videos (github auth, Upload)
-
-James :
-  I worked on the following tasks : random login photo and ability to upload profile pic
-
-  I watched the following videos : Both videos (github auth, Upload)
-  
-Jennifer : 
-  I worked on the following tasks :  Github login, Dashboard(waiting for Armaan to get back to me on proper layout) 
-
-  I watched the following videos : Both videos (github auth, Upload)
   

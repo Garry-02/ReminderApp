@@ -3,7 +3,7 @@ module.exports = {
       if (req.isAuthenticated()) {
         return next();
       }
-      res.redirect("/reminders/login");
+      res.redirect("/login");
     },
     //if already logged in it will not allow the user to see the login page again, it will redirect to dashboard
     forwardAuthenticated: function (req, res, next) {
