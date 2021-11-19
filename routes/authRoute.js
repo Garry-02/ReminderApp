@@ -6,7 +6,7 @@ const router = express.Router();
 //shows login page/register page
 //localhost:3002/auth/login
 router.get("/login", (req, res) => res.render("auth/login"));
-router.get("/github", passport.authenticate("auth/github"));
+router.get("/github", passport.authenticate("github"));
 router.get("/register", forwardAuthenticated, (req, res) => res.render("auth/register"));
 
 router.get(

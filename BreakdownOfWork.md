@@ -32,3 +32,22 @@ Jennifer :
 
   I watched the following videos :  Let's build a reminder App parts 1, 2, 3 
   
+  
+  November 9 (Third Sprint Start)
+
+Garry :
+  I worked on the following tasks : 
+
+  I watched the following videos :
+  
+James :
+  I worked on the following tasks : upload profile pics(not working yet)
+
+  I watched the following videos : Github auth, upload images
+  
+Jennifer : 
+  I worked on the following tasks :  Worked on Github login(has a bug), started on dashboard, profile picture, Admin/user capabilities(not completed)
+
+  I watched the following videos :   Github auth, upload images
+  
+  

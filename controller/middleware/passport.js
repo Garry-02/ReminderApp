@@ -1,5 +1,6 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const GitHubStrategy = require("passport-github2").Strategy;
 const userController = require("../userController");
 const localLogin = new LocalStrategy(
   {
@@ -49,4 +50,4 @@ passport.deserializeUser(function (id, done) {
 });
 
 
-module.exports = passport.use(localLogin, githubLogin);
+module.exports = passport.use(localLogin).use(githubLogin);

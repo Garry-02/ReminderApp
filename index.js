@@ -12,6 +12,8 @@ const imgur = require("imgur");
 const cors = require("cors");
 const fs = require("fs");
 
+require("dotenv").config()
+
 const storage = multer.diskStorage({
   destination: "./uploads",
   filename: (req, file, callback) => {
@@ -102,6 +104,14 @@ app.get("/register", authController.register);
 app.get("/login", authController.login);
 app.post("/register", authController.registerSubmit);
 app.post("/login", authController.loginSubmit);
+
+app.get("/dashboard", ensureAuthenticated, (req, res) => {
+  console.log(req.sessionID);
+  res.render("dashboard", {
+    user: req.user,
+  });
+});
+
 // app.use("/", indexRoute);
 app.use("/auth", authRoute);
 

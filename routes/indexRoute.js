@@ -18,12 +18,6 @@ router.get("/auth", () => console.log("in index"));
 
 //Dashboard route
 //localhost:3002/dashboard
-router.get("/dashboard", ensureAuthenticated, (req, res) => {
-  console.log(req.sessionID);
-  res.render("dashboard", {
-    user: req.user,
-  });
-});
 
 
 
