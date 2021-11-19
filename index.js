@@ -12,6 +12,7 @@ const imgur = require("imgur");
 const cors = require("cors");
 const fs = require("fs");
 
+
 const passport = require("./controller/middleware/passport");
 const authRoute = require("./routes/authRoute");
 const indexRoute = require("./routes/indexRoute");
@@ -47,6 +48,11 @@ app.use(
     },
   })
 );
+//ask jennifer about below commented out code
+// why was this not inserted
+
+// app.use(express.json({ extended: false }));
+// app.use(express.urlencoded({ extended: true }));
 
 
 app.use(upload.any());
