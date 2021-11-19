@@ -1,6 +1,6 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-const githubLogin = require("passport-github2").Strategy;
+const GitHubStrategy = require("passport-github2").Strategy;
 const userController = require("../userController");
 const localLogin = new LocalStrategy(
   {
@@ -21,6 +21,7 @@ const localLogin = new LocalStrategy(
         });
   }
 );
+
 let githubLogin = new GitHubStrategy(
   {
     clientID: process.env.CLIENT_ID,
@@ -32,6 +33,7 @@ let githubLogin = new GitHubStrategy(
     return done(null, user);
   }
 )
+
 //This is where the session is created
 //when the seesion is created what does it look like? stores some type of infop that will allow us to identify them that we store for the session 
 //creates a special variable req.user = user; gives all the information about the currently logged in user
@@ -48,6 +50,7 @@ passport.deserializeUser(function (id, done) {
     done({ message: "User not found" }, null);
   }
 });
+
 
 
 module.exports = passport.use(localLogin, githubLogin);
