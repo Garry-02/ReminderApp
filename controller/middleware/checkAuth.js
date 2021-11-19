@@ -12,6 +12,14 @@ module.exports = {
       }
       res.redirect("/reminders");
     },
+    isAdmin: function (req, res, next) {
+      if (!req.isAuthenticated() || req.user.role !== "admin") {
+        res.redirect('/')
+      };
+      if (req.user.role === 'admin') {
+        return next();
+      }
+    }
   };
   //when next is callled it means we are giving permission for the next code to run
   //so if ensureAuthenticated is false then it redirects to the login again and will keep doing This
