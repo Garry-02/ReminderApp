@@ -13,7 +13,7 @@ const database = [
       name: "Johnny Doe",
       email: "johnny123@gmail.com",
       password: "johnny123!",
-      role: "admin"
+      role: "admin",
       reminders: [],
     },
     {
@@ -21,7 +21,7 @@ const database = [
       name: "Jonathan Chen",
       email: "jonathan123@gmail.com",
       password: "jonathan123!",
-      role: "user"
+      role: "user",
       reminders: [],
     },
   ];
