@@ -18,36 +18,17 @@ Jennifer :
 November 2 (Second Sprint Start)
 
 Garry :
-  I worked on the following tasks : 
+  I worked on the following tasks : Reveiwed code, fixed file paths, fixed repository
 
   I watched the following videos : Rewatched Let's build a reminder App parts 1, 2, 3, Authentication 
   
 James :
   I worked on the following tasks : 
 
-  I watched the following videos : 
+  I watched the following videos : Let's build a reminder App parts 1, 2, 3, Authentication
   
 Jennifer : 
-  I worked on the following tasks :  Created the Delete and Edit button
+  I worked on the following tasks : Register into local database, Log-in with credentials, ensure authentication 
 
-  I watched the following videos :  Let's build a reminder App parts 1, 2, 3 
-  
-  
-  November 9 (Third Sprint Start)
 
-Garry :
-  I worked on the following tasks : 
-
-  I watched the following videos :
-  
-James :
-  I worked on the following tasks : upload profile pics(not working yet)
-
-  I watched the following videos : Github auth, upload images
-  
-Jennifer : 
-  I worked on the following tasks :  Worked on Github login(has a bug), started on dashboard, profile picture, Admin/user capabilities(not completed)
-
-  I watched the following videos :   Github auth, upload images
-  
   
