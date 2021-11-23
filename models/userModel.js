@@ -27,6 +27,16 @@ const database = [
   ];
   
   const userModel = {
+    getUserByGitHubIdOrCreate: (profile) => {
+      const user = userModel.findById(profile.id)
+      if(!user) {
+        let user = {id: profile.id, name: profile.username, reminders: [] };
+        database.push(user)
+        return user;
+      } else {
+        return user;
+      }
+    },
     findOne: (email) => {
       const user = database.find((user) => user.email === email); 
       if (user) {
@@ -39,7 +49,7 @@ const database = [
       if (user) {
         return user;
       }
-      throw new Error(`Couldn't find user with id: ${id}`);
+     return null;
     },
   };
   

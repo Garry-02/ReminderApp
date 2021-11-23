@@ -6,14 +6,15 @@ const router = express.Router();
 //shows login page/register page
 //localhost:3002/auth/login
 router.get("/login", (req, res) => res.render("auth/login"));
+router.get("/dashboard", (req, res) => res.render("auth/dashboard", { user: req.user}));
 router.get("/github", passport.authenticate("github"));
 router.get("/register", forwardAuthenticated, (req, res) => res.render("auth/register"));
 
-router.get(
+router.get( 
   "/github/callback",
   passport.authenticate("github"),
   function (req, res) {
-    res.redirect("/dashboard");
+    res.redirect("/auth/dashboard");
   }
 );
 //code used when login button clicked
