@@ -12,11 +12,12 @@ const imgur = require("imgur");
 const cors = require("cors");
 const fs = require("fs");
 
+require("dotenv").config()
 
 const passport = require("./controller/middleware/passport");
 const authRoute = require("./routes/authRoute");
 const indexRoute = require("./routes/indexRoute");
-
+  
 //start of the Profile Pic section
 const storage = multer.diskStorage({
   destination: "./uploads",

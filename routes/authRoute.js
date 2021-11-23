@@ -6,6 +6,7 @@ const router = express.Router();
 //shows login page/register page
 //localhost:3002/auth/login
 router.get("/login", (req, res) => res.render("auth/login"));
+router.get("/dashboard", (req, res) => res.render("auth/dashboard", { user: req.user}));
 router.get("/github", passport.authenticate("auth/github"));
 router.get("/register", forwardAuthenticated, (req, res) => res.render("auth/register"));
 
@@ -23,7 +24,7 @@ router.post(
   //core of passport will handle authentication via middleware
   //local can be changed to say twitter or whatever you want to use to login
   passport.authenticate("local", {
-    successRedirect: "/dashboard",
+    successRedirect: "/auth/dashboard",
     failureRedirect: "/auth/login",
   })
 );

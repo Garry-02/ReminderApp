@@ -1,12 +1,18 @@
+const process = require("process")
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const GitHubStrategy = require("passport-github2").Strategy;
 const userController = require("../userController");
+const dotenv = require("dotenv")
+dotenv.config() 
+
 const localLogin = new LocalStrategy(
   {
     usernameField: "email",
     passwordField: "password",
   },
+
+
 
 //inside of function we first check database for user with email and password, if not return null
 //if not null passing to done function otherwise we pass null, if called with a user we create a session 
@@ -22,6 +28,8 @@ const localLogin = new LocalStrategy(
   }
 );
 
+
+
 let githubLogin = new GitHubStrategy(
   {
     clientID: process.env.CLIENT_ID,
@@ -33,7 +41,6 @@ let githubLogin = new GitHubStrategy(
     return done(null, user);
   }
 )
-
 //This is where the session is created
 //when the seesion is created what does it look like? stores some type of infop that will allow us to identify them that we store for the session 
 //creates a special variable req.user = user; gives all the information about the currently logged in user
@@ -52,5 +59,4 @@ passport.deserializeUser(function (id, done) {
 });
 
 
-
-module.exports = passport.use(localLogin, githubLogin);
+module.exports = passport.use(localLogin).use(githubLogin);
