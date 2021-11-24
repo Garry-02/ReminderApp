@@ -23,6 +23,7 @@ const indexRoute = require("./routes/indexRoute");
 const adminRoute = require("./routes/adminRoute");
 const fetch = require("node-fetch");
 
+
 //start of the Profile Pic section
 
 //random pic section
@@ -150,7 +151,7 @@ app.post("/login", authController.loginSubmit);
 
 app.get("/dashboard", ensureAuthenticated, (req, res) => {
   console.log(req.sessionID);
-  res.render("dashboard", {
+  res.render("auth/dashboard", {
     user: req.user,
   });
 });
