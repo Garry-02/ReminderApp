@@ -7,7 +7,9 @@ const database = [
       password: "jimmy123!",
       reminders: [],
       role: "user",
+      profilepic: "url genreaated by the upsplash api or uploaded profile pic url from imgur"
     },
+  
     {
       id: 2,
       name: "Johnny Doe",
@@ -51,6 +53,7 @@ const database = [
       }
      return null;
     },
+    
   };
   
   module.exports = { database, userModel };

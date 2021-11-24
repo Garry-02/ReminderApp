@@ -12,12 +12,16 @@ const imgur = require("imgur");
 const cors = require("cors");
 const fs = require("fs");
 
+// const database = require("model/usermodel/{database}")
+
+
 require("dotenv").config()
 
 const passport = require("./controller/middleware/passport");
 const authRoute = require("./routes/authRoute");
 const indexRoute = require("./routes/indexRoute");
 const adminRoute = require("./routes/adminRoute");
+const fetch = require("node-fetch");
 
 //start of the Profile Pic section
 
@@ -25,13 +29,29 @@ const adminRoute = require("./routes/adminRoute");
 
 function randPicGen() {
 
-  const rand_pic_url = 'https://api.unsplash.com/photos/random?client_id=SkbZtC5qiRRqDkFJBTl7J9bN8Ar5t5doimLxs-GCvoc'
+  // let rand_pic_url = 'https://api.unsplash.com/photos/random?client_id=SkbZtC5qiRRqDkFJBTl7J9bN8Ar5t5doimLxs-GCvoc'
+  // fetch(rand_pic_url).then(data => data.json()).then(d => console.log(d))
+//   fs.readFile("randomImg.json", "utf8")
+//     .then((content) => JSON.parse(content).users.urls.small)
+//     .then((listOfUsers) => listOfUsers.find((user) => user.id === id))
+//     .then((foundUser) => {
+//       res.render("homepage", { user: foundUser });
+//     });
+  
+//     fs.readFile("randomImg.json", "utf8")
+//       .then((content) => JSON.parse(content).users)
+//       .then((listOfUsers) => listOfUsers.find((user) => user.id === id))
+//       .then((foundUser) => {
+//         res.render("homepage", { user: foundUser });
+//       });
+//   });
+  
 
-  fetch(rand_pic_url) 
-}
+
+// }
 // now add this for each profile
 
-
+}
 const storage = multer.diskStorage({
   destination: "./uploads",
   filename: (req, file, callback) => {
