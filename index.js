@@ -85,9 +85,10 @@ app.use(
   })
 );
 //ask jennifer about below commented out code
-// why was this not inserted
+// why was this not inserted 
+//it is furhter down
 
-// app.use(express.json({ extended: false }));
+ app.use(express.json({ extended: false }));
 // app.use(express.urlencoded({ extended: true }));
 
 
@@ -137,9 +138,10 @@ app.post("/reminder/delete/:id", ensureAuthenticated, reminderController.delete)
 // Fix this to work with passport! The registration does not need to work, you can use the fake database for this.
 app.get("/register", authController.register);
 app.get("/login", authController.login);
+//app.get("/create", reminderController.create)
 app.post("/register", authController.registerSubmit);
 app.post("/login", authController.loginSubmit);
-
+//app.post("/reminders", reminderController.createSubmit);
 app.get("/dashboard", ensureAuthenticated, (req, res) => {
   console.log(req.sessionID);
   res.render("auth/dashboard", {

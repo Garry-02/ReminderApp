@@ -16,14 +16,15 @@ router.get("/", async (req, res) => {
 
 router.get("/auth", () => console.log("in index"));
 
-//Dashboard route
-//localhost:3002/dashboard
+router.get("/auth/register", (req, res) => {
+  res.render("/register")
 
+  });
 
 
 //if ensureAuthenticated gives permission then the code will run
 //reminders page  localhost:3002/reminders
-router.get("/reminders", ensureAuthenticated, (req, res) => {
+router.get("reminders", ensureAuthenticated, (req, res) => {
   res.render("reminders", {
     user: req.user,
   });

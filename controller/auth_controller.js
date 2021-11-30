@@ -1,8 +1,9 @@
 let {database} = require("../models/userModel");
 const fetch = require("node-fetch")
-//let ID = function getRandom() {
- // return Math.random();
-//};
+//let ID = {
+ // getRandom() {
+  //return Math.random();
+//}};
 
 let authController = {
   login: (req, res) => {
@@ -14,7 +15,7 @@ let authController = {
   },
 
   loginSubmit: (req, res) => {
-    // implement
+    res.render("/auth/dashboard")
   },
 
 
