@@ -26,6 +26,15 @@ const database = [
       role: "user",
       reminders: [],
     },
+    {
+      id: 4,
+      name: 'james',
+      email: 'james@gmail.com',
+      password: 'james',
+      reminders: [],
+      role: 'user',
+      profilePic: 'https://images.unsplash.com/photo-1636715083006-a494358bb99a?crop=entropy&cs=srgb&fm=jpg&ixid=MnwyNzc2Njl8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Mzc4NzY1Nzc&ixlib=rb-1.2.1&q=85'
+    },
   ];
   
   const userModel = {
