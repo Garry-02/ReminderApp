@@ -24,7 +24,7 @@ let authController = {
     fetch(rand_pic_url).then(data => data.json()).then(d => {
     let newUser = {
       //id: Math.floor(Math.random * 1000) + 1,
-      id: 4,   
+      id: 5,   
       name: req.body.username,
       email: req.body.email,
       password: req.body.password,
