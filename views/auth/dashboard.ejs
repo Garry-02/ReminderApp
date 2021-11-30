@@ -1,29 +1,65 @@
-<h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome <%= user.name %></p>
-
-
-
-
-<input type="file" name="file" id="file">
-<script src="app.js"></script>
-
-<div class="profilePicInput">
-    <img src="<%= user.profilePic%>" alt="profile picture for the user <%= user.name %>"  width="500" height="600"> 
-    <!--<input type="file" name="file" id="file">-->
-
-
-    <a href="/auth/profilepic"  class="btn btn-secondary">Change Profile Picture</a>
-    <!--<script src="../../public/app.js"></script>   -->
-</div>
-
-<div class="changeProficPic">
-    <input type="file" name="file" id="file">
-    <script src="../../public/app.js"></script>
-    
-</div>
-
-
-<a href="/auth/logout" class="btn btn-secondary">Logout</a>
 
 <% include ../partials/navbar %>
+<h1 class="mt-4">Dashboard</h1>   
+<p class="lead mb-3">Welcome <%= user.name %></p>
+<br>
+<img src="<%= user.profilePic%>" alt="profile picture for the user <%= user.name %>"  width="250" height="300" style="float:left" position=static> 
+
+<div class="dropdown">
+    <button class="dropbtn">Change Profile Picture</button>
+    <div class="dropdown-content">
+        <a class="profilePicInput">
+    <img src="<%= user.profilePic%>" alt="profile picture for the user <%= user.name %>"  width="250" height="300" style="float:left"> 
+    <input type="file" name="file" id="file"></a>
+    </div>
+</div>
+
+
+
+<style>
+    .dropbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+    
+    .dropdown {
+      position: absolute;
+      top:515px;
+      left:35px;
+      display: block;
+
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
+    
+
+
+
+
+
 
