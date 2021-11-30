@@ -85,6 +85,7 @@ const isAuth = (req,res,next) => {
   }
 }
 
+
 app.get('/',isAuth, (req,res) => {
    res.sendFile(__dirname + './views/dashboard.ejs');
 });
