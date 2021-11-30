@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="page-header">Reminder Buddy</h1>
-
+  <% include ../partials/navbar %> <!--added navbar-->
 <ul class="list-group">
   <% reminders.forEach(function (reminderItem) { %>
     <li class="list-group-item">
@@ -18,4 +18,3 @@
 </ul>
 
 </div>
-<% include ../partials/navbar %>
