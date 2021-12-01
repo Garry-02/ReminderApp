@@ -43,7 +43,7 @@ let remindersController = {
 
   update: (req, res) => {     // feature to update the reminder 
     // implement this code
-   let reminderToUpdate = req.users.reminders.find(function (reminder) {   // finds the reminder to be updated
+   let reminderToUpdate = req.user.reminders.find(function (reminder) {   // finds the reminder to be updated
      return reminder.id == req.params.id;   
    });
     // updates the data of the reminder 
@@ -56,11 +56,11 @@ let remindersController = {
 
   delete: (req, res) => {   // feature to delete the reminder 
     // Implement this code
-    reminderToDelete = req.users.reminders.find(function (reminder) {    // finds the reminder to be deleted
+    reminderToDelete = req.user.reminders.find(function (reminder) {    // finds the reminder to be deleted
       return reminder.id == req.params.id;
     });
 
-   req.users.reminders.splice(reminderToDelete, req.body.id);   // deletes the reminder 
+    req.user.reminders.splice(reminderToDelete, req.user.id);   // deletes the reminder 
 
     res.redirect("/reminders");   // redirect to "/reminders"
   },
