@@ -39,13 +39,6 @@ function (accessToken, refreshToken, profile, done){
     }
   );
 
-// passport.use( 'github', new GitHubStrategy({
-//     authorizationURL: 'https://www.github.com/oauth2/authorize',
-//     tokenURL: 'https://www.github.com/oauth2/token',
-//     clientID: process.env.CLIENT_SECRET,
-//     clientSecret: process.env.CLIENT_ID,
-//     callbackURL: "http://localhost:3002/auth/github/callback"
-//   })),
 //This is where the session is created
 //when the seesion is created what does it look like? stores some type of infop that will allow us to identify them that we store for the session 
 //creates a special variable req.user = user; gives all the information about the currently logged in user

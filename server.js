@@ -27,7 +27,7 @@ app.use(
 const passport = require("./controller/middleware/passport");
 const authRoute = require("./routes/authRoute");
 const indexRoute = require("./routes/indexRoute");
-// const helpRoute = require("./routes/helpRoute");
+
 
 // Middleware for express
 //app.use(express.json());
@@ -55,7 +55,6 @@ app.use((req, res, next) => {
 //imported at the top from a folder
 app.use("/", indexRoute);
 app.use("/auth", authRoute);
-//app.use("/help", helpRoute);
 
 passport.serializeUser(function(user,cb)  {
   cb(null,user.id);
@@ -85,6 +84,7 @@ const isAuth = (req,res,next) => {
     res.redirect('/login');
   }
 }
+
 
 app.get('/',isAuth, (req,res) => {
    res.sendFile(__dirname + './views/dashboard.ejs');

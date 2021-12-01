@@ -11,9 +11,15 @@ const multer = require("multer");
 const imgur = require("imgur");
 const cors = require("cors");
 const fs = require("fs");
+
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 // const database = require("model/usermodel/{database}")
+
+
+const database = require("./models/userModel").userModel;
+
+
 
 
 require("dotenv").config()
@@ -29,7 +35,7 @@ const fetch = require("node-fetch");
 
 //random pic section
 
-function randPicGen() {
+//function randPicGen() {
 
   // let rand_pic_url = 'https://api.unsplash.com/photos/random?client_id=SkbZtC5qiRRqDkFJBTl7J9bN8Ar5t5doimLxs-GCvoc'
   // fetch(rand_pic_url).then(data => data.json()).then(d => console.log(d))
@@ -53,7 +59,7 @@ function randPicGen() {
 // }
 // now add this for each profile
 
-}
+//}
 const storage = multer.diskStorage({
   destination: "./uploads",
   filename: (req, file, callback) => {
@@ -85,25 +91,16 @@ app.use(
   })
 );
 //ask jennifer about below commented out code
-// why was this not inserted
+// why was this not inserted 
+//it is furhter down
 
-// app.use(express.json({ extended: false }));
+ app.use(express.json({ extended: false }));
 // app.use(express.urlencoded({ extended: true }));
 
 
 app.use(upload.any());
 // removes the image stored in "/uploads/" file
 // after uploading the profile pic to imgur.
-app.post("/uploads/", async (req, res) => {
-  const file = req.files[0];
-  try {
-    const url = await imgur.uploadFile('./uploads/${file.filename}');
-    res.json({ message: url.data.link });
-    fs.unlinkSync('./uploads/${file.filename}');
-  } catch (error) {
-    console.log("error", error);
-  }
-});
 // End of ProfilePic section.
 
 app.use(express.urlencoded({ extended: true }));
@@ -147,14 +144,31 @@ app.post("/reminder/delete/:id", ensureAuthenticated, reminderController.delete)
 // Fix this to work with passport! The registration does not need to work, you can use the fake database for this.
 app.get("/register", authController.register);
 app.get("/login", authController.login);
+//app.get("/create", reminderController.create)
 app.post("/register", authController.registerSubmit);
 app.post("/login", authController.loginSubmit);
-
+//app.post("/reminders", reminderController.createSubmit);
 app.get("/dashboard", ensureAuthenticated, (req, res) => {
   console.log(req.sessionID);
   res.render("auth/dashboard", {
     user: req.user,
   });
+});
+
+
+app.post("/uploads/", async (req, res) => {
+  const file = req.files[0];
+  try {
+    const url = await imgur.uploadFile(`./uploads/${file.filename}`);
+    const currentUser = database.findById(req.user.id);
+    const userProfPic = url.link;
+    currentUser.profilePic = userProfPic;
+    // If this still isn't working, it means you need to overwrite the old user in the database with currentUser
+    res.json({ message: url.link });
+    fs.unlinkSync(`./uploads/${file.filename}`);
+  } catch (error) {
+    console.log("error", error);
+  }
 });
 
 // app.use("/", indexRoute);

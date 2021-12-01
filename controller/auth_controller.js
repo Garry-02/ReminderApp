@@ -1,8 +1,9 @@
 let {database} = require("../models/userModel");
 const fetch = require("node-fetch")
-//let ID = function getRandom() {
- // return Math.random();
-//};
+//let ID = {
+ // getRandom() {
+  //return Math.random();
+//}};
 
 let authController = {
   login: (req, res) => {
@@ -14,7 +15,7 @@ let authController = {
   },
 
   loginSubmit: (req, res) => {
-    // implement
+    res.render("/auth/dashboard")
   },
 
 
@@ -24,7 +25,7 @@ let authController = {
     fetch(rand_pic_url).then(data => data.json()).then(d => {
     let newUser = {
       //id: Math.floor(Math.random * 1000) + 1,
-      id: 4,   
+      id: 5,   
       name: req.body.username,
       email: req.body.email,
       password: req.body.password,
