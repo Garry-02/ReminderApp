@@ -11,7 +11,8 @@ const multer = require("multer");
 const imgur = require("imgur");
 const cors = require("cors");
 const fs = require("fs");
-
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
 // const database = require("model/usermodel/{database}")
 
 
@@ -158,6 +159,12 @@ app.get("/dashboard", ensureAuthenticated, (req, res) => {
 
 // app.use("/", indexRoute);
 app.use("/auth", authRoute);
+
+// Get users in prisma database  
+app.get("/users", async (req, res) => {
+  const users = await prisma.user.findMany();
+  res.json(users);
+});
 
 app.listen(3002, function () {
   console.log(
