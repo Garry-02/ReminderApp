@@ -2,15 +2,61 @@
 <% include ../partials/navbar %>
 <h1 class="mt-4">Dashboard</h1>   
 <p class="lead mb-3">Welcome <%= user.name %></p>
-<img src="<%= user.profilePic%>" alt="profile picture for the user <%= user.name %>"  width="250" height="300" style="float:left" position=static> 
+
+
+<div>
+<img src="<%= user.profilePic%>" href="/auth/profilepic" alt="profile picture for the user <%= user.name %>"  width="250" height="300" style="float:left" position=static> 
+<script src="../../public/app.js"></script>
+</div>
+
 <div class="dropdown">
     <button class="dropbtn">Change Profile Picture</button>
     <div class="dropdown-content">
         <a class="profilePicInput">
     <img src="<%= user.profilePic%>" alt="profile picture for the user <%= user.name %>"  width="250" height="300" style="float:left"> 
-    <input type="file" name="file" id="file"></a>
+    <input type="file" name="file" id="file">
+    <input type="file" name="file" id="file">
+    <script src="app.js"></script>
+    <script src="../../public/app.js"></script></a>
     </div>
 </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
