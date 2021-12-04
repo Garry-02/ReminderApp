@@ -13,13 +13,6 @@ const getUserByEmailIdAndPassword = (email, password) => {
 const getUserByGitHubIdOrCreate = (profile) =>{
   let user = userModel.getUserByGitHubIdOrCreate(profile);
   return user;
-  // if (user) {
-  //   if (isUserValid(user, password)) {
-  //     return user;
-  //   }
-  // } else {
-
-  // }
 };
 
 const getUserById = (id) => {
