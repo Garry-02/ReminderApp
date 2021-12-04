@@ -35,6 +35,6 @@
     "passport-oauth": "^1.0.0"
   },
   "devDependencies": {
-    "prisma": "^3.5.0"
+    "prisma": "^3.6.0"
   }
 }
