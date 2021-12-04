@@ -15,9 +15,10 @@ Jennifer :
 
   I watched the following videos :  Let's build a reminder App parts 1, 2, 3 
 
+//
+//  
+//  
 
-  
-  
 November 2 - November 9 (Second Sprint)
 
 Garry :
@@ -34,6 +35,10 @@ Jennifer :
   I worked on the following tasks : Register into local database, Log-in with credentials, ensure authentication
   I watched the following videos :  Authentication videos
   
+ //
+ //
+ //
+ 
     
 November 9 (Third Sprint)
 
@@ -42,7 +47,7 @@ Garry :
   I watched the following videos : None
   
 James :
-  I worked on the following tasks : Nothing 
+  I worked on the following tasks : Upload img with imgur, random img generator, placing img into mock database
   I watched the following videos : None
   
 Jennifer : 
@@ -57,7 +62,7 @@ Garry :
   I watched the following videos : None
   
 James :
-  I worked on the following tasks : Profile picture upload and randomly generated pic for new registers
+  I worked on the following tasks : Upload img with imgur, random img generator, placing img into mock database
 
   I watched the following videos : Uploading images to your application
   
