@@ -40,7 +40,7 @@ function (accessToken, refreshToken, profile, done){
   );
 
 //This is where the session is created
-//when the seesion is created what does it look like? stores some type of infop that will allow us to identify them that we store for the session 
+//when the seesion is created what does it look like? stores some type of info that will allow us to identify them for the session 
 //creates a special variable req.user = user; gives all the information about the currently logged in user
 passport.serializeUser(function (user, done) {
   //the second parameter is telling you what to store in the session 
