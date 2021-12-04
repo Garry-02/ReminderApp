@@ -1,4 +1,4 @@
-// let database = require("../database");
+
 let { database } = require("../models/userModel")
 
 let remindersController = {
@@ -33,6 +33,7 @@ let remindersController = {
     res.redirect("/reminders");
   },
 
+  //edit a reminder in your user profile. 
   edit: (req, res) => {
     let reminderToFind = req.params.id;
     let searchResult = req.user.reminders.find(function (reminder) {
@@ -41,8 +42,8 @@ let remindersController = {
     res.render("reminder/edit", { reminderItem: searchResult });
   },
 
-  update: (req, res) => {     // feature to update the reminder 
-    // implement this code
+  update: (req, res) => {     
+     // feature to update the reminder
    let reminderToUpdate = req.user.reminders.find(function (reminder) {   // finds the reminder to be updated
      return reminder.id == req.params.id;   
    });
@@ -54,8 +55,8 @@ let remindersController = {
     res.redirect("/reminders");   // redirect to "/reminders"
 },
 
-  delete: (req, res) => {   // feature to delete the reminder 
-    // Implement this code
+  delete: (req, res) => {   
+    // feature to delete the reminder 
     reminderToDelete = req.user.reminders.find(function (reminder) {    // finds the reminder to be deleted
       return reminder.id == req.params.id;
     });
