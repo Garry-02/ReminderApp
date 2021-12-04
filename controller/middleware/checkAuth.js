@@ -22,6 +22,6 @@ module.exports = {
     }
   };
   //when next is callled it means we are giving permission for the next code to run
-  //so if ensureAuthenticated is false then it redirects to the login again and will keep doing This
+  //so if ensureAuthenticated is false then it redirects to the login again and will keep doing so. This
   //ensureAuthenticated protects user information from allowing anyone to go to it,its a securtiy feature to make sure 
   //you are a logged in user to gain access
