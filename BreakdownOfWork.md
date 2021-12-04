@@ -1,63 +1,68 @@
-October 26 (First Sprint Start)
+October 26 - November 2 (First Sprint)
 
 Garry :
-  I worked on the following tasks : Added comments for Edit and Delete
+  I worked on the following tasks : Nothing
 
   I watched the following videos :  Let's build a reminder App parts 1, 2, 3 
   
 James :
-  I worked on the following tasks : 
+  I worked on the following tasks : Nothing (sick)
 
-  I watched the following videos : 
+  I watched the following videos : None
   
 Jennifer : 
-  I worked on the following tasks :  Created the Delete and Edit button
+  I worked on the following tasks :  Created the Delete and Edit function for individual reminders 
 
   I watched the following videos :  Let's build a reminder App parts 1, 2, 3 
+
+
   
-November 2 (Second Sprint Start)
+  
+November 2 - November 9 (Second Sprint)
 
 Garry :
-  I worked on the following tasks : Reveiwed code, fixed file paths, fixed repository
+  I worked on the following tasks : Granted privileges for the repo for other teammates so they do not need to fork it anymore 
 
   I watched the following videos : Rewatched Let's build a reminder App parts 1, 2, 3, Authentication 
   
 James :
-  I worked on the following tasks : 
+  I worked on the following tasks : Nothing (sick)
 
   I watched the following videos : Let's build a reminder App parts 1, 2, 3, Authentication
   
 Jennifer : 
-  I worked on the following tasks : Register into local database, Log-in with credentials, ensure authentication 
-
-
-November 9 (third Sprint Start)
+  I worked on the following tasks : Register into local database, Log-in with credentials, ensure authentication
+  I watched the following videos :  Authentication videos
+  
+    
+November 9 (Third Sprint)
 
 Garry :
-  I worked on the following tasks : Reveiwed code, fixed file paths, fixed repository
-
-  I watched the following videos : Rewatched Let's build a reminder App parts 1, 2, 3, Authentication 
+  I worked on the following tasks : Added admin capabilities 
+  I watched the following videos : None
   
 James :
-  I worked on the following tasks : Upload img with imgur, random img generator, placing img into mock database, 
-
-  I watched the following videos : Let's build a reminder App parts 1, 2, 3, Authentication, uploading images,
+  I worked on the following tasks : Nothing 
+  I watched the following videos : None
   
 Jennifer : 
-  I worked on the following tasks : Register into local database, Log-in with credentials, ensure authentication 
+  I worked on the following tasks : Github Login, Created dashboard, started profile picture upload, added user roles to database  
+  I watched the following videos : Uploading images to your application,  Help with Github Authentication-Passport
+
   
+November 16 - December 3 (Fourth Sprint)
 
-November 16 (Fourth Sprint Start)
-
-Garry :
-  I worked on the following tasks : Reveiwed code, fixed file paths, fixed repository
-
-  I watched the following videos : Rewatched Let's build a reminder App parts 1, 2, 3, Authentication 
+Garry : 
+  I worked on the following tasks : Prisma
+  I watched the following videos : None
   
 James :
-  I worked on the following tasks : Upload img with imgur, random img generator with unsplashed, placing img into mock database, studied imgur api(didnt have to in the end), fixed broken code various times as it broke the server.
+  I worked on the following tasks : Profile picture upload and randomly generated pic for new registers
 
-  I watched the following videos : Let's build a reminder App parts 1, 2, 3, Authentication, uploading images, passport
+  I watched the following videos : Uploading images to your application
   
 Jennifer : 
-  I worked on the following tasks : Register into local database, Log-in with credentials, ensure authentication 
+  I worked on the following tasks : Remove navbar from login/register page, debugged edit/delete/create a reminder functions, cleaned up code, added comments, workbreakdown,       fixed profile picture upload, applied css, added function to clear register form, reviewed all code and tested the functionality extensively for the app, removed old database   and updated our current db
+ 
+  I watched the following videos : Youtube/geeks for geeks/google
+  
