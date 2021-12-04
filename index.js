@@ -11,16 +11,9 @@ const multer = require("multer");
 const imgur = require("imgur");
 const cors = require("cors");
 const fs = require("fs");
-
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
-// const database = require("model/usermodel/{database}")
-
-
 const database = require("./models/userModel").userModel;
-
-
-
 
 require("dotenv").config()
 
@@ -31,35 +24,6 @@ const adminRoute = require("./routes/adminRoute");
 const fetch = require("node-fetch");
 
 
-//start of the Profile Pic section
-
-//random pic section
-
-//function randPicGen() {
-
-  // let rand_pic_url = 'https://api.unsplash.com/photos/random?client_id=SkbZtC5qiRRqDkFJBTl7J9bN8Ar5t5doimLxs-GCvoc'
-  // fetch(rand_pic_url).then(data => data.json()).then(d => console.log(d))
-//   fs.readFile("randomImg.json", "utf8")
-//     .then((content) => JSON.parse(content).users.urls.small)
-//     .then((listOfUsers) => listOfUsers.find((user) => user.id === id))
-//     .then((foundUser) => {
-//       res.render("homepage", { user: foundUser });
-//     });
-  
-//     fs.readFile("randomImg.json", "utf8")
-//       .then((content) => JSON.parse(content).users)
-//       .then((listOfUsers) => listOfUsers.find((user) => user.id === id))
-//       .then((foundUser) => {
-//         res.render("homepage", { user: foundUser });
-//       });
-//   });
-  
-
-
-// }
-// now add this for each profile
-
-//}
 const storage = multer.diskStorage({
   destination: "./uploads",
   filename: (req, file, callback) => {
@@ -90,9 +54,7 @@ app.use(
     },
   })
 );
-//ask jennifer about below commented out code
-// why was this not inserted 
-//it is furhter down
+
 
  app.use(express.json({ extended: false }));
 // app.use(express.urlencoded({ extended: true }));
@@ -110,6 +72,7 @@ app.use(ejsLayouts);
 app.set("view engine", "ejs");
 //tells server to use passport
 app.use(passport.initialize());
+
 // Routes start here
 app.use(passport.session());
 
@@ -163,7 +126,6 @@ app.post("/uploads/", async (req, res) => {
     const currentUser = database.findById(req.user.id);
     const userProfPic = url.link;
     currentUser.profilePic = userProfPic;
-    // If this still isn't working, it means you need to overwrite the old user in the database with currentUser
     res.json({ message: url.link });
     fs.unlinkSync(`./uploads/${file.filename}`);
   } catch (error) {
