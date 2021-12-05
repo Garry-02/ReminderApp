@@ -44,7 +44,7 @@ Jennifer :
 
 /--------------------------------------------------------------------------------------------------------------------/
     
-November 9 (Third Sprint)
+November 9 - November 16(Third Sprint)
 
 Garry :
   I worked on the following tasks : Added admin capabilities 
