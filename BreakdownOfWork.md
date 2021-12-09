@@ -47,7 +47,7 @@ Jennifer :
 November 9 - November 16(Third Sprint)
 
 Garry :
-  I worked on the following tasks : Added admin capabilities, fixed pathing issues 
+  I worked on the following tasks : Added admin capabilities
   I watched the following videos : None
   
 James :
@@ -67,7 +67,7 @@ Jennifer :
 November 16 - December 3 (Fourth Sprint)
 
 Garry : 
-  I worked on the following tasks : Prisma, cleaned up code, helped james and jennifer on their tasks
+  I worked on the following tasks : Prisma
   I watched the following videos : uploading images to your application, prisma tutorials, prisma documentation
   
 James :
